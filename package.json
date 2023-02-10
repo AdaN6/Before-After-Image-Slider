@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "sass": "^1.58.0"
+    "sass": "^1.58.0",
+    "css": "node-sass --include-path scss path/to/file.scss path/to/output.css",
+    "watch": "nodemon -e scss -x 'npm run css'"
   }
+  
 }
