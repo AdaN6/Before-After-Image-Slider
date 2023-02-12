@@ -23,7 +23,7 @@ main {
   position: relative;
   overflow: hidden;
   border-radius: 1rem;
-  position: 50%;
+  --position: var(--position, $position);
 }
 
 .image-container {
@@ -44,7 +44,7 @@ main {
 .image-before {
   position: absolute;
   inset: 0;
-  width: 50%;
+  width: var(--position, 50%);
 }
 
 .slider {
@@ -67,7 +67,7 @@ main {
   height: 100%;
   background-color: #dddddd;
   z-index: 10;
-  left: 50%;
+  left: var(--position, 50%);
   transform: translateX(-50%);
   pointer-events: none;
 }
@@ -80,7 +80,7 @@ main {
   display: grid;
   place-items: center;
   top: 50%;
-  left: 50%;
+  left: var(--position, 50%);
   transform: translateX(-50%);
   pointer-events: none;
   z-index: 100;
